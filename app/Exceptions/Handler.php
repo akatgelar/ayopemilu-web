@@ -73,7 +73,7 @@ class Handler extends ExceptionHandler
         }
 
         $response = [];
-        $response['success'] = false;
+        $response['status'] = false;
         $response['status_code'] = $statusCode;
         $response['message'] = 'Unknown error';
         $response['data'] = [];

@@ -150,9 +150,9 @@ class SettingController extends Controller
 
         // result
         if($data) {
-            return new ApiResource(true, 200, 'Get data successfull', $data, $metadata);
+            return new ApiResource(true, 'Get data successfull', $data, $metadata);
         } else {
-            return new ApiResource(false, 200, 'No data found', [], $metadata);
+            return new ApiResource(false, 'No data found', [], $metadata);
         }
     }
 
@@ -202,9 +202,9 @@ class SettingController extends Controller
 
         // result
         if($data) {
-            return new ApiResource(true, 200, 'Get data successfull', $data->toArray(), []);
+            return new ApiResource(true, 'Get data successfull', $data->toArray(), []);
         } else {
-            return new ApiResource(false, 200, 'No data found', [], []);
+            return new ApiResource(false, 'No data found', [], []);
         }
     }
 
@@ -261,9 +261,9 @@ class SettingController extends Controller
         $data = Setting::create($req);
 
         if($data) {
-            return new ApiResource(true, 201, 'Insert data successfull', $data->toArray(), []);
+            return new ApiResource(true, 'Insert data successfull', $data->toArray(), []);
         } else {
-            return new ApiResource(false, 400, 'Failed to insert data', [], []);
+            return new ApiResource(false, 'Failed to insert data', [], []);
         }
     }
 
@@ -332,9 +332,9 @@ class SettingController extends Controller
         $data = Setting::findOrFail($id);
 
         if($data) {
-            return new ApiResource(true, 201, 'Update data successfull', $data->toArray(), []);
+            return new ApiResource(true, 'Update data successfull', $data->toArray(), []);
         } else {
-            return new ApiResource(false, 400, 'Failed to update data', [], []);
+            return new ApiResource(false, 'Failed to update data', [], []);
         }
     }
 
@@ -376,9 +376,9 @@ class SettingController extends Controller
         $query->delete();
 
         if($query) {
-            return new ApiResource(true, 201, 'Delete data successfull', [], []);
+            return new ApiResource(true, 'Delete data successfull', [], []);
         } else {
-            return new ApiResource(false, 400, 'Failed to delete data', [], []);
+            return new ApiResource(false, 'Failed to delete data', [], []);
         }
     }
 }

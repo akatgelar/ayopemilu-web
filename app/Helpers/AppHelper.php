@@ -20,8 +20,8 @@ class AppHelper
     function setSession($user, $token) {
         session([
             'user_id' => $user['id'],
-            'user_level_id' => $user['level_id'],
-            'user_level_name' => $user['level_name'],
+            'user_level_id' => $user['role']['id'],
+            'user_level_name' => $user['role']['name'],
             'user_name' => $user['name'],
             'user_email' => $user['email'],
             'user_picture' => $user['picture'],
@@ -77,7 +77,7 @@ class AppHelper
             $req = Request::create('api/setting', 'GET');
             $res = Route::dispatch($req);
             $res_json = json_decode($res->getContent(), true);
-            if ($res_json['success'] == true) {
+            if ($res_json['status']) {
                 foreach ($res_json['data'] as $row) {
                     $res_data[$row['key']] = $row['value'];
                 }
@@ -98,7 +98,7 @@ class AppHelper
             $req = Request::create($endpoint, 'GET');
             $res = Route::dispatch($req);
             $res_json = json_decode($res->getContent(), true);
-            if ($res_json['success'] == true) {
+            if ($res_json['status'] == true) {
                 $res_data = $res_json['data'];
             } else {
                 Log::error($res_json['message']);
@@ -117,7 +117,7 @@ class AppHelper
             $req = Request::create($endpoint, 'POST')->replace($payload);
             $res = Route::dispatch($req);
             $res_json = json_decode($res->getContent(), true);
-            if ($res_json['success'] == true) {
+            if ($res_json['status'] == true) {
                 $res_data = $res_json['data'];
             } else {
                 Log::error($res_json['message']);
@@ -136,7 +136,7 @@ class AppHelper
             $req = Request::create($endpoint, 'POST')->replace($payload);
             $res = Route::dispatch($req);
             $res_json = json_decode($res->getContent(), true);
-            if ($res_json['success'] == true) {
+            if ($res_json['status'] == true) {
                 $res_data = $res_json['data'];
             } else {
                 Log::error($res_json['message']);
