@@ -9,19 +9,11 @@
                         <div class="flex-wrap d-flex justify-content-between align-items-center">
                             <div>
                                 <div class="header-title">
-                                    <h2 class="card-title">Role</h2>
+                                    <h2 class="card-title">Setting</h2>
                                     <p>List data</p>
                                 </div>
                             </div>
                             <div>
-                                <a href="{{ url("/admin/role/create") }}" class="btn btn-md btn-success">
-                                    <svg class="icon-20" width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12.0001 8.32739V15.6537" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path d="M15.6668 11.9904H8.3335" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6857 2H7.31429C4.04762 2 2 4.31208 2 7.58516V16.4148C2 19.6879 4.0381 22 7.31429 22H16.6857C19.9619 22 22 19.6879 22 16.4148V7.58516C22 4.31208 19.9619 2 16.6857 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                    Tambah Data
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -32,7 +24,9 @@
                                 <thead>
                                     <tr>
                                         <th>Id</th>
-                                        <th>Role</th>
+                                        <th>Type</th>
+                                        <th>Key</th>
+                                        <th>Value</th>
                                         <th>Created At</th>
                                         <th>Status</th>
                                         <th>Action</th>
@@ -52,7 +46,7 @@
         $('#datatable').DataTable( {
             order: [[ 0, 'desc' ]],
             lengthMenu: [[ 5, 15, 25, 100], [ 5, 15, 25, 100]],
-            pageLength: 5,
+            pageLength: 25,
             processing: true,
             serverSide: true,
             autoWidth: false,
@@ -66,7 +60,7 @@
                         'Authorization': "Bearer {{$session_token}}"
                     }
                 });
-                $.get('/api/role', {
+                $.get('/api/setting', {
                     per_page: data.length,
                     page: (data.start / data.length) + 1,
                     sort: sort_col_name + ':' + sort_col_order,
@@ -85,9 +79,25 @@
                     data: 'id'
                 },
                 {
-                    data: 'name',
+                    data: 'type',
                     render: function (data, type, row, meta) {
                         return '<span style="white-space: normal;">' + data + '</span>';
+                    }
+                },
+                {
+                    data: 'key',
+                    render: function (data, type, row, meta) {
+                        return '<span style="white-space: normal;">' + data + '</span>';
+                    }
+                },
+                {
+                    data: 'value',
+                    render: function (data, type, row, meta) {
+                        if (data) {
+                            return '<span style="white-space: normal;">' + data.replace(/<[^>]*>?/gm, '').substring(0, 50) + '...</span>';
+                        } else {
+                            return '';
+                        }
                     }
                 },
                 {
@@ -97,7 +107,7 @@
                     }
                 },
                 {
-                    data: 'status',
+                    data: 'is_active',
                     render: function (data, type, row, meta) {
                         if(data == '1') {
                             return '<span class="badge bg-success">Active</span>';
@@ -110,7 +120,7 @@
                     data: 'id',
                     render: function (data, type, row, meta) {
                         var btn_detail = `
-                            <a href="{{ url("/admin/role/`+data+`") }}" class="btn btn-sm btn-icon btn-info flex-end" data-bs-toggle="tooltip" aria-label="Detail" data-bs-original-title="Detail">
+                            <a href="{{ url("/admin/setting/`+data+`") }}" class="btn btn-sm btn-icon btn-info flex-end" data-bs-toggle="tooltip" aria-label="Detail" data-bs-original-title="Detail">
                                 <span class="btn-inner">
                                     <svg class="icon-20" width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="11.7669" cy="11.7666" r="8.98856" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></circle>                                    <path d="M18.0186 18.4851L21.5426 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -118,7 +128,7 @@
                                 </span>
                             </a>`;
                         var btn_edit = `
-                            <a href="{{ url("/admin/role/`+data+`/edit") }}" class="btn btn-sm btn-icon btn-warning flex-end" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit">
+                            <a href="{{ url("/admin/setting/`+data+`/edit") }}" class="btn btn-sm btn-icon btn-warning flex-end" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit">
                                 <span class="btn-inner">
                                     <svg class="icon-20" width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M11.4925 2.78906H7.75349C4.67849 2.78906 2.75049 4.96606 2.75049 8.04806V16.3621C2.75049 19.4441 4.66949 21.6211 7.75349 21.6211H16.5775C19.6625 21.6211 21.5815 19.4441 21.5815 16.3621V12.3341" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -144,10 +154,10 @@
             columnDefs: [
                 {targets: [0], width: "5%"},
                 {targets: [1], width: "25%"},
-                {targets: [2], width: "25%"},
-                {targets: [3], width: "10%"},
-                {targets: [4], width: "10%"},
-                // {targets: [6], width: "10%", orderable: false}
+                {targets: [2], width: "30%"},
+                {targets: [3], width: "20%"},
+                {targets: [4], width: "20%"},
+                {targets: [5], width: "10%", orderable: false}
             ],
         });
 
@@ -169,7 +179,7 @@
                         }
                     });
                     $.ajax({
-                        url: '/api/role/'+id,
+                        url: '/api/setting/'+id,
                         type: "DELETE",
                         contentType: "application/json; charset=utf-8",
                         dataType: "json",
@@ -182,7 +192,7 @@
                                     text: result['message'],
                                     confirmButtonColor: '#3A57E8',
                                 }).then((result) => {
-                                    window.location.replace("{{ url('/admin/role') }}");
+                                    window.location.replace("{{ url('/admin/setting') }}");
                                 });
                             } else {
                                 Swal.fire({

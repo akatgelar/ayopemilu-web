@@ -54,7 +54,7 @@
     <script>
         $('#datatable').DataTable( {
             order: [[ 0, 'desc' ]],
-            lengthMenu: [[ 5, 15, 25, 100, -1 ], [ 5, 15, 25, 100, 'All' ]],
+            lengthMenu: [[ 5, 15, 25, 100], [ 5, 15, 25, 100]],
             pageLength: 5,
             processing: true,
             serverSide: true,
