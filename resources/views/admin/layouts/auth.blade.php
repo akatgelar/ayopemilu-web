@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Admin {{ $setting['name'] }}</title>
+    <title>Admin Ayo Pemilu</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ asset('/' . $setting['icon']) }}">
+    <link rel="shortcut icon" href="{{ asset('assets/client/images/ayopemilu_logo.png') }}">
 
     <!-- Library / Plugin Css Build -->
     <link rel="stylesheet" href="{{ asset('assets/admin/css/core/libs.min.css') }}">

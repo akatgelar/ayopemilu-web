@@ -99,57 +99,99 @@
                         <hr class="hr-horizontal" style="background-color: white">
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link @if (str_contains($menu, 'attendance')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/attendance') }}">
+                        <a class="nav-link @if (str_contains($menu, 'election')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/election') }}">
                             <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/shield-checkmark-outline.svg') }}">
-                            <span class="item-name">Kehadiran</span>
+                            <span class="item-name">Election</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link @if (str_contains($menu, 'permit')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/permit') }}">
-                            <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/documents-outline.svg') }}">
-                            <span class="item-name">Izin</span>
+                        <a class="nav-link @if (str_contains($menu, 'Caleg')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/Caleg') }}">
+                            <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/person-outline.svg') }}">
+                            <span class="item-name">Caleg</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link @if (str_contains($menu, 'activity')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/activity') }}">
-                            <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/reader-outline.svg') }}">
-                            <span class="item-name">Kegiatan</span>
+                        <a class="nav-link @if (str_contains($menu, 'relawan')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/relawan') }}">
+                            <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/person-outline.svg') }}">
+                            <span class="item-name">Relawan</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link @if (str_contains($menu, 'announcement')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/announcement') }}">
-                            <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/megaphone-outline.svg') }}">
-                            <span class="item-name">Pengumuman</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @if (str_contains($menu, 'agenda')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/agenda') }}">
-                            <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/calendar-outline.svg') }}">
-                            <span class="item-name">Agenda</span>
+                        <a class="nav-link @if (str_contains($menu, 'pemilih')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/pemilih') }}">
+                            <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/people-outline.svg') }}">
+                            <span class="item-name">Pemilih</span>
                         </a>
                     </li>
                     <li>
                         <hr class="hr-horizontal" style="background-color: white">
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link @if (str_contains($menu, 'division')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/division') }}">
-                            <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/grid-outline.svg') }}">
-                            <span class="item-name">Jenis Pegawai (Divisi)</span>
+                        <a class="nav-link @if (str_contains($menu, 'laporan')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/laporan') }}">
+                            <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/document-text-outline.svg') }}">
+                            <span class="item-name">Laporan</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link @if (str_contains($menu, 'role')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/role') }}">
+                        <a class="nav-link @if (str_contains($menu, 'survey')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/survey') }}">
+                            <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/create-outline.svg') }}">
+                            <span class="item-name">Survey</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @if (str_contains($menu, 'quickcount')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/quickcount') }}">
+                            <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/bar-chart-outline.svg') }}">
+                            <span class="item-name">Quick Count</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @if (str_contains($menu, 'pengeluaran')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/pengeluaran') }}">
+                            <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/cash-outline.svg') }}">
+                            <span class="item-name">Pengeluaran</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @if (str_contains($menu, 'inventaris')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/inventaris') }}">
                             <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/briefcase-outline.svg') }}">
-                            <span class="item-name">Jabatan Pegawai</span>
+                            <span class="item-name">Inventaris</span>
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="hr-horizontal" style="background-color: white">
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @if (str_contains($menu, 'area_provinsi')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/area_provinsi') }}">
+                            <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/apps-outline.svg') }}">
+                            <span class="item-name">Area Provinsi</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link @if (str_contains($menu, 'department')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/department') }}">
-                            <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/business-outline.svg') }}">
-                            <span class="item-name">Lokasi Kerja</span>
+                        <a class="nav-link @if (str_contains($menu, 'area_kota')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/area_kota') }}">
+                            <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/apps-outline.svg') }}">
+                            <span class="item-name">Area Kota</span>
                         </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @if (str_contains($menu, 'area_kecamatan')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/area_kecamatan') }}">
+                            <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/apps-outline.svg') }}">
+                            <span class="item-name">Area Kecamatan</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @if (str_contains($menu, 'area_kelurahan')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/area_kelurahan') }}">
+                            <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/apps-outline.svg') }}">
+                            <span class="item-name">Area Kelurahan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="hr-horizontal" style="background-color: white">
                     </li>
                     @if ($session_data['user_level_id'] == 1)
+                        <li class="nav-item">
+                            <a class="nav-link @if (str_contains($menu, 'role')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/role') }}">
+                                <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/options-outline.svg') }}">
+                                <span class="item-name">Role</span>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link @if (str_contains($menu, 'user')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/user') }}">
                                 <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/person-add-outline.svg') }}">
@@ -157,104 +199,12 @@
                             </a>
                         </li>
                     @endif
-                    <li>
-                        <hr class="hr-horizontal" style="background-color: white">
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @if (str_contains($menu, 'slider')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/slider') }}">
-                            <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/images-outline.svg') }}">
-                            <span class="item-name">Slider</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @if (str_contains($menu, 'feature')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/feature') }}">
-                            <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/apps-outline.svg') }}">
-                            <span class="item-name">Feature</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @if (str_contains($menu, 'download')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/download') }}">
-                            <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/download-outline.svg') }}">
-                            <span class="item-name">Download APK</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @if (str_contains($menu, 'pages')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/pages') }}">
-                            <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/document-text-outline.svg') }}">
-                            <span class="item-name">Pages</span>
-                        </a>
-                    </li>
-                    <li>
-                        <hr class="hr-horizontal" style="background-color: white">
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link @if (str_contains($menu, 'setting')) {{'active'}} @endif" aria-current="page" href="{{ url('/admin/setting') }}">
                             <img class="icon" width="24px;" style="filter: invert(1);" src="{{ asset('/assets/admin/images/svg/settings-outline.svg') }}">
                             <span class="item-name">Setting</span>
                         </a>
                     </li>
-                    {{-- <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#horizontal-menu" role="button"
-                            aria-expanded="@if (str_contains($menu, 'blog')) {{'true'}} @endif" aria-controls="horizontal-menu">
-                            <i class="icon">
-                                <svg width="20" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" class="icon-20">
-                                    <path opacity="0.4"
-                                        d="M10.0833 15.958H3.50777C2.67555 15.958 2 16.6217 2 17.4393C2 18.2559 2.67555 18.9207 3.50777 18.9207H10.0833C10.9155 18.9207 11.5911 18.2559 11.5911 17.4393C11.5911 16.6217 10.9155 15.958 10.0833 15.958Z"
-                                        fill="currentColor"></path>
-                                    <path opacity="0.4"
-                                        d="M22.0001 6.37867C22.0001 5.56214 21.3246 4.89844 20.4934 4.89844H13.9179C13.0857 4.89844 12.4102 5.56214 12.4102 6.37867C12.4102 7.1963 13.0857 7.86 13.9179 7.86H20.4934C21.3246 7.86 22.0001 7.1963 22.0001 6.37867Z"
-                                        fill="currentColor"></path>
-                                    <path
-                                        d="M8.87774 6.37856C8.87774 8.24523 7.33886 9.75821 5.43887 9.75821C3.53999 9.75821 2 8.24523 2 6.37856C2 4.51298 3.53999 3 5.43887 3C7.33886 3 8.87774 4.51298 8.87774 6.37856Z"
-                                        fill="currentColor"></path>
-                                    <path
-                                        d="M21.9998 17.3992C21.9998 19.2648 20.4609 20.7777 18.5609 20.7777C16.6621 20.7777 15.1221 19.2648 15.1221 17.3992C15.1221 15.5325 16.6621 14.0195 18.5609 14.0195C20.4609 14.0195 21.9998 15.5325 21.9998 17.3992Z"
-                                        fill="currentColor"></path>
-                                </svg>
-                            </i>
-                            <span class="item-name">Blog</span>
-                            <i class="right-icon">
-                                <svg class="icon-18" xmlns="http://www.w3.org/2000/svg" width="18"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 5l7 7-7 7" />
-                                </svg>
-                            </i>
-                        </a>
-                        <ul class="sub-nav collapse @if (str_contains($menu, 'blog')) {{'show'}} @endif" id="horizontal-menu" data-bs-parent="#sidebar-menu">
-                            <li class="nav-item">
-                                <a class="nav-link @if (str_contains($menu, 'blog-list')) {{'active'}} @endif" href="{{ url('/admin/blog') }}">
-                                    <i class="icon">
-                                        <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10"
-                                            viewBox="0 0 24 24" fill="currentColor">
-                                            <g>
-                                                <circle cx="12" cy="12" r="8" fill="currentColor">
-                                                </circle>
-                                            </g>
-                                        </svg>
-                                    </i>
-                                    <i class="sidenav-mini-icon"> L </i>
-                                    <span class="item-name"> List </span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link @if (str_contains($menu, 'blog-add')) {{'active'}} @endif" href="{{ url('/admin/blog/add') }}">
-                                    <i class="icon">
-                                        <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10"
-                                            viewBox="0 0 24 24" fill="currentColor">
-                                            <g>
-                                                <circle cx="12" cy="12" r="8" fill="currentColor">
-                                                </circle>
-                                            </g>
-                                        </svg>
-                                    </i>
-                                    <i class="sidenav-mini-icon"> A </i>
-                                    <span class="item-name">Add</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li> --}}
                     <li style="margin-bottom: 40px">
                         <hr class="hr-horizontal">
                     </li>
