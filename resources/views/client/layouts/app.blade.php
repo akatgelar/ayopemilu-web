@@ -13,10 +13,10 @@
     <meta name="og:title" content="Ayo Pemilu - Sukseskan Pemilu">
     <meta name="og:description" content="Ayo Pemilu. Membantu sukseskan pencalonan Anda di Pemilu 2024.">
     <meta name="og:url" content="https://ayopemilu.id">
-    <meta name="og:image" content="{{ asset('assets/client/images/relawan_pemilu_logo.png') }}">
+    <meta name="og:image" content="{{ asset('assets/client/images/ayopemilu_logo.png') }}">
     <meta name="og:image:alt" content="Ayo Pemilu">
 
-    <link rel="shortcut icon" href="{{ asset('assets/client/images/relawan_pemilu_logo.png') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/client/images/ayopemilu_logo.png') }}">
 
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="{{ asset('assets/client/css/bootstrap.min.css') }}" type="text/css" id="bootstrap-style">
@@ -58,8 +58,8 @@
 
             <!-- LOGO -->
             <a class="navbar-brand logo text-uppercase" href="index.html">
-                <img src="{{ asset('assets/client/images/relawan_pemilu_logo_title.png') }}" class="logo-light" alt="" height="50">
-                <img src="{{ asset('assets/client/images/relawan_pemilu_logo_title.png') }}" class="logo-dark" alt="" height="50">
+                <img src="{{ asset('assets/client/images/ayopemilu_logo_title.png') }}" class="logo-light" alt="" height="50">
+                <img src="{{ asset('assets/client/images/ayopemilu_logo_title.png') }}" class="logo-dark" alt="" height="50">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -108,7 +108,7 @@
             <div class="row ">
                 <div class="col-lg-4">
                     <a class="navbar-brand logo text-uppercase" href="index.html">
-                        <img src="{{ asset('assets/client/images/relawan_pemilu_logo_text_white.png') }}" class="logo-light" alt="" height="50">
+                        <img src="{{ asset('assets/client/images/ayopemilu_logo_text_white.png') }}" class="logo-light" alt="" height="50">
                     </a>
                     <p class="text-white-50 mt-2 mb-0">Dengan aplikasi Ayo Pemilu, dengan mudah memantau calon pemilih, relawan dan perangkat pemilu lainnya. Sebuah aplikasi dengan berbagai fitur mencatatan proses pemilu.</p>
 
