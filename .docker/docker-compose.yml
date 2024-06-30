@@ -1,14 +1,14 @@
 services:
   web:
     # build: .
-    image: registry.gitlab.com/elefandesign/absensi-web:latest
-    container_name: 'absensi-web'
+    image: akatgelar/ayopemilu:latest
+    container_name: 'ayopemilu'
     env_file:
       - .env
     ports:
-      - "2010:80"
+      - "2030:80"
     volumes:
-      - /home/app/absensi-web/uploads:/var/www/public/uploads
-    #   - /home/app/absensi-web/storage/framework:/var/www/storage/framework
-    #   - /home/app/absensi-web/storage/logs:/var/www/storage/logs
+      - /home/app/ayopemilu/uploads:/var/www/public/uploads
+    #   - /home/app/companyprofile-laravel/storage/framework:/var/www/storage/framework
+    #   - /home/app/companyprofile-laravel/storage/logs:/var/www/storage/logs
     restart: always
