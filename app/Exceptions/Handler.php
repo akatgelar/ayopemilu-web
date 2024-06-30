@@ -77,7 +77,7 @@ class Handler extends ExceptionHandler
         $response['status_code'] = $statusCode;
         $response['message'] = 'Unknown error';
         $response['data'] = [];
-        $response['metadata'] = [];
+        $response['pagination'] = [];
 
         switch ($statusCode) {
             case 302:

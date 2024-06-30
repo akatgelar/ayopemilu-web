@@ -2633,7 +2633,7 @@
                                     "success": true,
                                     "message": "Get Data Successfull",
                                     "data": [],
-                                    "metadata": {
+                                    "pagination": {
                                         "total_data": "",
                                         "per_page": "",
                                         "total_page": "",
@@ -2681,7 +2681,7 @@
                                     "success": true,
                                     "message": "Insert Data Successfull",
                                     "data": [],
-                                    "metadata": []
+                                    "pagination": []
                                 }
                             }
                         }
@@ -2722,7 +2722,7 @@
                                     "success": true,
                                     "message": "Get Data Successfull",
                                     "data": [],
-                                    "metadata": []
+                                    "pagination": []
                                 }
                             }
                         }
@@ -2776,7 +2776,7 @@
                                     "success": true,
                                     "message": "Update Data Successfull",
                                     "data": [],
-                                    "metadata": []
+                                    "pagination": []
                                 }
                             }
                         }
@@ -2815,7 +2815,7 @@
                                     "success": true,
                                     "message": "Delete Data Successfull",
                                     "data": [],
-                                    "metadata": []
+                                    "pagination": []
                                 }
                             }
                         }

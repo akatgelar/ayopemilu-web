@@ -195,7 +195,7 @@ class DashboardController extends Controller
      *                  "success"=true,
      *                  "message"="Get Data Successfull",
      *                  "data"={},
-     *                  "metadata"={}
+     *                  "pagination"={}
      *              }
      *         )
      *     )
@@ -207,7 +207,7 @@ class DashboardController extends Controller
         $query = Log::groupBy('path')->selectRaw('path, count(*) as total')->orderBy('total', 'desc')->get()->toArray();
 
         $data = [];
-        $metadata = [];
+        $pagination = [];
         foreach($query as $qry) {
             $temp = $qry;
             array_push($data, $temp);
@@ -215,9 +215,9 @@ class DashboardController extends Controller
 
         // result
         if($data) {
-            return new ApiResource(true, 'Get data successfull', $data, $metadata);
+            return new ApiResource(true, 'Get data successfull', $data, $pagination);
         } else {
-            return new ApiResource(false, 'No data found', [], $metadata);
+            return new ApiResource(false, 'No data found', [], $pagination);
         }
     }
 
@@ -238,7 +238,7 @@ class DashboardController extends Controller
      *                  "success"=true,
      *                  "message"="Get Data Successfull",
      *                  "data"={},
-     *                  "metadata"={}
+     *                  "pagination"={}
      *              }
      *         )
      *     )
@@ -252,7 +252,7 @@ class DashboardController extends Controller
         $queryTablet = Log::selectRaw('count(*) as total')->where('is_tablet', '1')->get();
 
         $data = [];
-        $metadata = [];
+        $pagination = [];
 
         $tempDesktop = [
             'device' => 'Desktop',
@@ -274,9 +274,9 @@ class DashboardController extends Controller
 
         // result
         if($data) {
-            return new ApiResource(true, 'Get data successfull', $data, $metadata);
+            return new ApiResource(true, 'Get data successfull', $data, $pagination);
         } else {
-            return new ApiResource(false, 'No data found', [], $metadata);
+            return new ApiResource(false, 'No data found', [], $pagination);
         }
     }
 
@@ -297,7 +297,7 @@ class DashboardController extends Controller
      *                  "success"=true,
      *                  "message"="Get Data Successfull",
      *                  "data"={},
-     *                  "metadata"={}
+     *                  "pagination"={}
      *              }
      *         )
      *     )
@@ -309,7 +309,7 @@ class DashboardController extends Controller
         $query = Log::groupBy('os')->selectRaw('os, count(*) as total')->orderBy('total', 'desc')->get()->toArray();
 
         $data = [];
-        $metadata = [];
+        $pagination = [];
         foreach($query as $qry) {
             $temp = $qry;
             array_push($data, $temp);
@@ -317,9 +317,9 @@ class DashboardController extends Controller
 
         // result
         if($data) {
-            return new ApiResource(true, 'Get data successfull', $data, $metadata);
+            return new ApiResource(true, 'Get data successfull', $data, $pagination);
         } else {
-            return new ApiResource(false, 'No data found', [], $metadata);
+            return new ApiResource(false, 'No data found', [], $pagination);
         }
     }
 
@@ -340,7 +340,7 @@ class DashboardController extends Controller
      *                  "success"=true,
      *                  "message"="Get Data Successfull",
      *                  "data"={},
-     *                  "metadata"={}
+     *                  "pagination"={}
      *              }
      *         )
      *     )
@@ -352,7 +352,7 @@ class DashboardController extends Controller
         $query = Log::groupBy('browser')->selectRaw('browser, count(*) as total')->orderBy('total', 'desc')->get()->toArray();
 
         $data = [];
-        $metadata = [];
+        $pagination = [];
         foreach($query as $qry) {
             $temp = $qry;
             array_push($data, $temp);
@@ -360,9 +360,9 @@ class DashboardController extends Controller
 
         // result
         if($data) {
-            return new ApiResource(true, 'Get data successfull', $data, $metadata);
+            return new ApiResource(true, 'Get data successfull', $data, $pagination);
         } else {
-            return new ApiResource(false, 'No data found', [], $metadata);
+            return new ApiResource(false, 'No data found', [], $pagination);
         }
     }
 
@@ -383,7 +383,7 @@ class DashboardController extends Controller
      *                  "success"=true,
      *                  "message"="Get Data Successfull",
      *                  "data"={},
-     *                  "metadata"={}
+     *                  "pagination"={}
      *              }
      *         )
      *     )
@@ -395,7 +395,7 @@ class DashboardController extends Controller
         $query = Log::groupBy('country_name')->selectRaw('country_name, count(*) as total')->whereRaw("country_name is not null and country_name != '' ")->orderBy('total', 'desc')->limit(10)->get()->toArray();
 
         $data = [];
-        $metadata = [];
+        $pagination = [];
         foreach($query as $qry) {
             $temp = $qry;
             array_push($data, $temp);
@@ -403,9 +403,9 @@ class DashboardController extends Controller
 
         // result
         if($data) {
-            return new ApiResource(true, 'Get data successfull', $data, $metadata);
+            return new ApiResource(true, 'Get data successfull', $data, $pagination);
         } else {
-            return new ApiResource(false, 'No data found', [], $metadata);
+            return new ApiResource(false, 'No data found', [], $pagination);
         }
     }
 
@@ -426,7 +426,7 @@ class DashboardController extends Controller
      *                  "success"=true,
      *                  "message"="Get Data Successfull",
      *                  "data"={},
-     *                  "metadata"={}
+     *                  "pagination"={}
      *              }
      *         )
      *     )
@@ -438,7 +438,7 @@ class DashboardController extends Controller
         $query = Log::groupBy('city_name')->selectRaw('city_name, count(*) as total')->whereRaw("city_name is not null and city_name != '' ")->orderBy('total', 'desc')->limit(10)->get()->toArray();
 
         $data = [];
-        $metadata = [];
+        $pagination = [];
         foreach($query as $qry) {
             $temp = $qry;
             array_push($data, $temp);
@@ -446,9 +446,9 @@ class DashboardController extends Controller
 
         // result
         if($data) {
-            return new ApiResource(true, 'Get data successfull', $data, $metadata);
+            return new ApiResource(true, 'Get data successfull', $data, $pagination);
         } else {
-            return new ApiResource(false, 'No data found', [], $metadata);
+            return new ApiResource(false, 'No data found', [], $pagination);
         }
     }
 
@@ -469,7 +469,7 @@ class DashboardController extends Controller
      *                  "success"=true,
      *                  "message"="Get Data Successfull",
      *                  "data"={},
-     *                  "metadata"={}
+     *                  "pagination"={}
      *              }
      *         )
      *     )
@@ -487,7 +487,7 @@ class DashboardController extends Controller
         ");
 
         $data = [];
-        $metadata = [];
+        $pagination = [];
         foreach($query as $qry) {
             $temp = $qry;
             $temp->dates_indo = \App\Helpers\AppHelper::instance()->convertDateIndo($temp->dates);
@@ -496,9 +496,9 @@ class DashboardController extends Controller
 
         // result
         if($data) {
-            return new ApiResource(true, 'Get data successfull', $data, $metadata);
+            return new ApiResource(true, 'Get data successfull', $data, $pagination);
         } else {
-            return new ApiResource(false, 'No data found', [], $metadata);
+            return new ApiResource(false, 'No data found', [], $pagination);
         }
     }
 
@@ -519,7 +519,7 @@ class DashboardController extends Controller
      *                  "success"=true,
      *                  "message"="Get Data Successfull",
      *                  "data"={},
-     *                  "metadata"={}
+     *                  "pagination"={}
      *              }
      *         )
      *     )
@@ -542,7 +542,7 @@ class DashboardController extends Controller
         ");
 
         $data = [];
-        $metadata = [];
+        $pagination = [];
         foreach($query as $qry) {
             $temp = $qry;
             $temp->months_indo = \App\Helpers\AppHelper::instance()->convertMonthIndo($temp->months);
@@ -551,9 +551,9 @@ class DashboardController extends Controller
 
         // result
         if($data) {
-            return new ApiResource(true, 'Get data successfull', $data, $metadata);
+            return new ApiResource(true, 'Get data successfull', $data, $pagination);
         } else {
-            return new ApiResource(false, 'No data found', [], $metadata);
+            return new ApiResource(false, 'No data found', [], $pagination);
         }
     }
 

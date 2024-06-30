@@ -76,7 +76,7 @@ class SettingController extends Controller
      *                  "success"=true,
      *                  "message"="Get Data Successfull",
      *                  "data"={},
-     *                  "metadata"={"total_data":"", "per_page":"", "total_page":"", "page":""}
+     *                  "pagination"={"total_data":"", "per_page":"", "total_page":"", "page":""}
      *              }
      *         )
      *     )
@@ -120,13 +120,13 @@ class SettingController extends Controller
 
         // data
         $data = [];
-        $metadata = [];
+        $pagination = [];
 
-        // metadata
-        $metadata['total_data'] = $query->count('id');
-        $metadata['per_page'] = $per_page;
-        $metadata['total_page'] = ceil($metadata['total_data'] / $metadata['per_page']);
-        $metadata['page'] = $page;
+        // pagination
+        $pagination['total_data'] = $query->count('id');
+        $pagination['per_page'] = $per_page;
+        $pagination['total_page'] = ceil($pagination['total_data'] / $pagination['per_page']);
+        $pagination['page'] = $page;
 
         // get count
         if($count == true) {
@@ -150,9 +150,9 @@ class SettingController extends Controller
 
         // result
         if($data) {
-            return new ApiResource(true, 'Get data successfull', $data, $metadata);
+            return new ApiResource(true, 'Get data successfull', $data, $pagination);
         } else {
-            return new ApiResource(false, 'No data found', [], $metadata);
+            return new ApiResource(false, 'No data found', [], $pagination);
         }
     }
 
@@ -181,7 +181,7 @@ class SettingController extends Controller
      *                  "success"=true,
      *                  "message"="Get Data Successfull",
      *                  "data"={},
-     *                  "metadata"={}
+     *                  "pagination"={}
      *              }
      *         )
      *     )
@@ -244,7 +244,7 @@ class SettingController extends Controller
      *                  "success"=true,
      *                  "message"="Insert Data Successfull",
      *                  "data"={},
-     *                  "metadata"={}
+     *                  "pagination"={}
      *              }
      *         )
      *     )
@@ -312,7 +312,7 @@ class SettingController extends Controller
      *                  "success"=true,
      *                  "message"="Update Data Successfull",
      *                  "data"={},
-     *                  "metadata"={}
+     *                  "pagination"={}
      *              }
      *         )
      *     )
@@ -364,7 +364,7 @@ class SettingController extends Controller
      *                  "success"=true,
      *                  "message"="Delete Data Successfull",
      *                  "data"={},
-     *                  "metadata"={}
+     *                  "pagination"={}
      *              }
      *         )
      *     )
