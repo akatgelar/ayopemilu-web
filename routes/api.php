@@ -142,8 +142,6 @@ Route::controller(App\Http\Controllers\Api\DashboardController::class)->group(fu
     Route::get('dashboard/inventory/{id}', 'inventory');
 });
 
-
-
 Route::fallback(function(){
     return response()->json(
         [

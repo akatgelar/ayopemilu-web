@@ -14,19 +14,19 @@
         "version": "1.0.0"
     },
     "paths": {
-        "/activity": {
+        "/api/area_kecamatan": {
             "get": {
                 "tags": [
-                    "Activity"
+                    "AreaKecamatan"
                 ],
                 "summary": "",
                 "description": "Get all data",
-                "operationId": "activity_index",
+                "operationId": "area_kecamatan_index",
                 "parameters": [
                     {
                         "name": "per_page",
                         "in": "query",
-                        "description": "per_page value is number. ex : ?per_page=10",
+                        "description": "Per Page value is number. ex : ?per_page=10",
                         "required": false,
                         "schema": {
                             "type": "number"
@@ -35,7 +35,7 @@
                     {
                         "name": "page",
                         "in": "query",
-                        "description": "page value is number. ex : ?page=1",
+                        "description": "Page value is number. ex : ?page=2",
                         "required": false,
                         "schema": {
                             "type": "number"
@@ -53,7 +53,7 @@
                     {
                         "name": "where",
                         "in": "query",
-                        "description": "Where value is object. ex : ?where={'name':['john','doe'], 'dob':'1990-12-31'}",
+                        "description": "Where value is object. ex : ?where={'name':'john', 'dob':'1990-12-31'}",
                         "required": false,
                         "schema": {
                             "type": "string"
@@ -75,15 +75,9 @@
                         "content": {
                             "application/json": {
                                 "example": {
-                                    "success": true,
+                                    "status": true,
                                     "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": {
-                                        "total_data": "",
-                                        "per_page": "",
-                                        "total_page": "",
-                                        "page": ""
-                                    }
+                                    "data": []
                                 }
                             }
                         }
@@ -97,11 +91,11 @@
             },
             "post": {
                 "tags": [
-                    "Activity"
+                    "AreaKecamatan"
                 ],
                 "summary": "",
                 "description": "Insert data",
-                "operationId": "activity_store",
+                "operationId": "area_kecamatan_store",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -124,8 +118,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Insert Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -138,14 +131,14 @@
                 ]
             }
         },
-        "/activity/{id}": {
+        "/api/area_kecamatan/{id}": {
             "get": {
                 "tags": [
-                    "Activity"
+                    "AreaKecamatan"
                 ],
                 "summary": "",
                 "description": "Get data by id",
-                "operationId": "activity_show",
+                "operationId": "area_kecamatan_show",
                 "parameters": [
                     {
                         "name": "id",
@@ -165,8 +158,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -180,11 +172,11 @@
             },
             "put": {
                 "tags": [
-                    "Activity"
+                    "AreaKecamatan"
                 ],
                 "summary": "",
                 "description": "Update data",
-                "operationId": "activity_update",
+                "operationId": "area_kecamatan_update",
                 "parameters": [
                     {
                         "name": "id",
@@ -218,8 +210,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Update Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -233,11 +224,11 @@
             },
             "delete": {
                 "tags": [
-                    "Activity"
+                    "AreaKecamatan"
                 ],
                 "summary": "",
                 "description": "Delete data",
-                "operationId": "activity_destroy",
+                "operationId": "area_kecamatan_destroy",
                 "parameters": [
                     {
                         "name": "id",
@@ -257,8 +248,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Delete Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -271,19 +261,19 @@
                 ]
             }
         },
-        "/agenda": {
+        "/api/area_kelurahan": {
             "get": {
                 "tags": [
-                    "Agenda"
+                    "AreaKelurahan"
                 ],
                 "summary": "",
                 "description": "Get all data",
-                "operationId": "agenda_index",
+                "operationId": "area_kelurahan_index",
                 "parameters": [
                     {
                         "name": "per_page",
                         "in": "query",
-                        "description": "per_page value is number. ex : ?per_page=10",
+                        "description": "Per Page value is number. ex : ?per_page=10",
                         "required": false,
                         "schema": {
                             "type": "number"
@@ -292,7 +282,7 @@
                     {
                         "name": "page",
                         "in": "query",
-                        "description": "page value is number. ex : ?page=1",
+                        "description": "Page value is number. ex : ?page=2",
                         "required": false,
                         "schema": {
                             "type": "number"
@@ -310,7 +300,7 @@
                     {
                         "name": "where",
                         "in": "query",
-                        "description": "Where value is object. ex : ?where={'name':['john','doe'], 'dob':'1990-12-31'}",
+                        "description": "Where value is object. ex : ?where={'name':'john', 'dob':'1990-12-31'}",
                         "required": false,
                         "schema": {
                             "type": "string"
@@ -332,15 +322,9 @@
                         "content": {
                             "application/json": {
                                 "example": {
-                                    "success": true,
+                                    "status": true,
                                     "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": {
-                                        "total_data": "",
-                                        "per_page": "",
-                                        "total_page": "",
-                                        "page": ""
-                                    }
+                                    "data": []
                                 }
                             }
                         }
@@ -354,11 +338,11 @@
             },
             "post": {
                 "tags": [
-                    "Agenda"
+                    "AreaKelurahan"
                 ],
                 "summary": "",
                 "description": "Insert data",
-                "operationId": "agenda_store",
+                "operationId": "area_kelurahan_store",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -381,8 +365,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Insert Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -395,14 +378,14 @@
                 ]
             }
         },
-        "/agenda/{id}": {
+        "/api/area_kelurahan/{id}": {
             "get": {
                 "tags": [
-                    "Agenda"
+                    "AreaKelurahan"
                 ],
                 "summary": "",
                 "description": "Get data by id",
-                "operationId": "agenda_show",
+                "operationId": "area_kelurahan_show",
                 "parameters": [
                     {
                         "name": "id",
@@ -422,8 +405,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -437,11 +419,11 @@
             },
             "put": {
                 "tags": [
-                    "Agenda"
+                    "AreaKelurahan"
                 ],
                 "summary": "",
                 "description": "Update data",
-                "operationId": "agenda_update",
+                "operationId": "area_kelurahan_update",
                 "parameters": [
                     {
                         "name": "id",
@@ -475,8 +457,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Update Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -490,11 +471,11 @@
             },
             "delete": {
                 "tags": [
-                    "Agenda"
+                    "AreaKelurahan"
                 ],
                 "summary": "",
                 "description": "Delete data",
-                "operationId": "agenda_destroy",
+                "operationId": "area_kelurahan_destroy",
                 "parameters": [
                     {
                         "name": "id",
@@ -514,8 +495,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Delete Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -528,19 +508,19 @@
                 ]
             }
         },
-        "/announcement": {
+        "/api/area_kota": {
             "get": {
                 "tags": [
-                    "Announcement"
+                    "AreaKota"
                 ],
                 "summary": "",
                 "description": "Get all data",
-                "operationId": "announcement_index",
+                "operationId": "area_kota_index",
                 "parameters": [
                     {
                         "name": "per_page",
                         "in": "query",
-                        "description": "per_page value is number. ex : ?per_page=10",
+                        "description": "Per Page value is number. ex : ?per_page=10",
                         "required": false,
                         "schema": {
                             "type": "number"
@@ -549,7 +529,7 @@
                     {
                         "name": "page",
                         "in": "query",
-                        "description": "page value is number. ex : ?page=1",
+                        "description": "Page value is number. ex : ?page=2",
                         "required": false,
                         "schema": {
                             "type": "number"
@@ -567,7 +547,7 @@
                     {
                         "name": "where",
                         "in": "query",
-                        "description": "Where value is object. ex : ?where={'name':['john','doe'], 'dob':'1990-12-31'}",
+                        "description": "Where value is object. ex : ?where={'name':'john', 'dob':'1990-12-31'}",
                         "required": false,
                         "schema": {
                             "type": "string"
@@ -589,15 +569,9 @@
                         "content": {
                             "application/json": {
                                 "example": {
-                                    "success": true,
+                                    "status": true,
                                     "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": {
-                                        "total_data": "",
-                                        "per_page": "",
-                                        "total_page": "",
-                                        "page": ""
-                                    }
+                                    "data": []
                                 }
                             }
                         }
@@ -611,11 +585,11 @@
             },
             "post": {
                 "tags": [
-                    "Announcement"
+                    "AreaKota"
                 ],
                 "summary": "",
                 "description": "Insert data",
-                "operationId": "announcement_store",
+                "operationId": "area_kota_store",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -638,8 +612,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Insert Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -652,14 +625,14 @@
                 ]
             }
         },
-        "/announcement/{id}": {
+        "/api/area_kota/{id}": {
             "get": {
                 "tags": [
-                    "Announcement"
+                    "AreaKota"
                 ],
                 "summary": "",
                 "description": "Get data by id",
-                "operationId": "announcement_show",
+                "operationId": "area_kota_show",
                 "parameters": [
                     {
                         "name": "id",
@@ -679,8 +652,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -694,11 +666,11 @@
             },
             "put": {
                 "tags": [
-                    "Announcement"
+                    "AreaKota"
                 ],
                 "summary": "",
                 "description": "Update data",
-                "operationId": "announcement_update",
+                "operationId": "area_kota_update",
                 "parameters": [
                     {
                         "name": "id",
@@ -732,8 +704,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Update Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -747,11 +718,11 @@
             },
             "delete": {
                 "tags": [
-                    "Announcement"
+                    "AreaKota"
                 ],
                 "summary": "",
                 "description": "Delete data",
-                "operationId": "announcement_destroy",
+                "operationId": "area_kota_destroy",
                 "parameters": [
                     {
                         "name": "id",
@@ -771,8 +742,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Delete Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -785,19 +755,19 @@
                 ]
             }
         },
-        "/attendance": {
+        "/api/area_provinsi": {
             "get": {
                 "tags": [
-                    "Attendance"
+                    "AreaProvinsi"
                 ],
                 "summary": "",
                 "description": "Get all data",
-                "operationId": "attendance_index",
+                "operationId": "area_provinsi_index",
                 "parameters": [
                     {
                         "name": "per_page",
                         "in": "query",
-                        "description": "per_page value is number. ex : ?per_page=10",
+                        "description": "Per Page value is number. ex : ?per_page=10",
                         "required": false,
                         "schema": {
                             "type": "number"
@@ -806,7 +776,7 @@
                     {
                         "name": "page",
                         "in": "query",
-                        "description": "page value is number. ex : ?page=1",
+                        "description": "Page value is number. ex : ?page=2",
                         "required": false,
                         "schema": {
                             "type": "number"
@@ -824,7 +794,7 @@
                     {
                         "name": "where",
                         "in": "query",
-                        "description": "Where value is object. ex : ?where={'name':['john','doe'], 'dob':'1990-12-31'}",
+                        "description": "Where value is object. ex : ?where={'name':'john', 'dob':'1990-12-31'}",
                         "required": false,
                         "schema": {
                             "type": "string"
@@ -846,15 +816,9 @@
                         "content": {
                             "application/json": {
                                 "example": {
-                                    "success": true,
+                                    "status": true,
                                     "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": {
-                                        "total_data": "",
-                                        "per_page": "",
-                                        "total_page": "",
-                                        "page": ""
-                                    }
+                                    "data": []
                                 }
                             }
                         }
@@ -868,11 +832,11 @@
             },
             "post": {
                 "tags": [
-                    "Attendance"
+                    "AreaProvinsi"
                 ],
                 "summary": "",
                 "description": "Insert data",
-                "operationId": "attendance_store",
+                "operationId": "area_provinsi_store",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -895,8 +859,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Insert Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -909,14 +872,14 @@
                 ]
             }
         },
-        "/attendance/{id}": {
+        "/api/area_provinsi/{id}": {
             "get": {
                 "tags": [
-                    "Attendance"
+                    "AreaProvinsi"
                 ],
                 "summary": "",
                 "description": "Get data by id",
-                "operationId": "attendance_show",
+                "operationId": "area_provinsi_show",
                 "parameters": [
                     {
                         "name": "id",
@@ -936,8 +899,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -951,11 +913,11 @@
             },
             "put": {
                 "tags": [
-                    "Attendance"
+                    "AreaProvinsi"
                 ],
                 "summary": "",
                 "description": "Update data",
-                "operationId": "attendance_update",
+                "operationId": "area_provinsi_update",
                 "parameters": [
                     {
                         "name": "id",
@@ -989,8 +951,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Update Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -1004,11 +965,11 @@
             },
             "delete": {
                 "tags": [
-                    "Attendance"
+                    "AreaProvinsi"
                 ],
                 "summary": "",
                 "description": "Delete data",
-                "operationId": "attendance_destroy",
+                "operationId": "area_provinsi_destroy",
                 "parameters": [
                     {
                         "name": "id",
@@ -1028,8 +989,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Delete Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -1042,1343 +1002,27 @@
                 ]
             }
         },
-        "/dashboard/top-page": {
-            "get": {
-                "tags": [
-                    "Dashboard"
-                ],
-                "summary": "",
-                "description": "Get top page",
-                "operationId": "dashboard_top_page",
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            }
-        },
-        "/dashboard/top-device": {
-            "get": {
-                "tags": [
-                    "Dashboard"
-                ],
-                "summary": "",
-                "description": "Get top device",
-                "operationId": "dashboard_top_device",
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            }
-        },
-        "/dashboard/top-os": {
-            "get": {
-                "tags": [
-                    "Dashboard"
-                ],
-                "summary": "",
-                "description": "Get top os",
-                "operationId": "dashboard_top_os",
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            }
-        },
-        "/dashboard/top-browser": {
-            "get": {
-                "tags": [
-                    "Dashboard"
-                ],
-                "summary": "",
-                "description": "Get top browser",
-                "operationId": "dashboard_top_browser",
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            }
-        },
-        "/dashboard/top-country": {
-            "get": {
-                "tags": [
-                    "Dashboard"
-                ],
-                "summary": "",
-                "description": "Get top country",
-                "operationId": "dashboard_top_country",
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            }
-        },
-        "/dashboard/top-city": {
-            "get": {
-                "tags": [
-                    "Dashboard"
-                ],
-                "summary": "",
-                "description": "Get top city",
-                "operationId": "dashboard_top_city",
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            }
-        },
-        "/dashboard/access-daily": {
-            "get": {
-                "tags": [
-                    "Dashboard"
-                ],
-                "summary": "",
-                "description": "Get access daily",
-                "operationId": "dashboard_access_daily",
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            }
-        },
-        "/dashboard/top-monthly": {
-            "get": {
-                "tags": [
-                    "Dashboard"
-                ],
-                "summary": "",
-                "description": "Get top monthly",
-                "operationId": "dashboard_top_monthly",
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            }
-        },
-        "/department": {
-            "get": {
-                "tags": [
-                    "Department"
-                ],
-                "summary": "",
-                "description": "Get all data",
-                "operationId": "department_index",
-                "parameters": [
-                    {
-                        "name": "per_page",
-                        "in": "query",
-                        "description": "per_page value is number. ex : ?per_page=10",
-                        "required": false,
-                        "schema": {
-                            "type": "number"
-                        }
-                    },
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "description": "page value is number. ex : ?page=1",
-                        "required": false,
-                        "schema": {
-                            "type": "number"
-                        }
-                    },
-                    {
-                        "name": "sort",
-                        "in": "query",
-                        "description": "Sort value is string with rule column-name:order. ex : ?sort=id:asc",
-                        "required": false,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "where",
-                        "in": "query",
-                        "description": "Where value is object. ex : ?where={'name':['john','doe'], 'dob':'1990-12-31'}",
-                        "required": false,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "count",
-                        "in": "query",
-                        "description": "Count value is boolean. ex : ?count=true",
-                        "required": false,
-                        "schema": {
-                            "type": "boolean"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": {
-                                        "total_data": "",
-                                        "per_page": "",
-                                        "total_page": "",
-                                        "page": ""
-                                    }
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            },
+        "/api/login": {
             "post": {
                 "tags": [
-                    "Department"
-                ],
-                "summary": "",
-                "description": "Insert data",
-                "operationId": "department_store",
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "properties": {
-                                    "name": {
-                                        "type": "string"
-                                    }
-                                },
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Insert Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            }
-        },
-        "/department/{id}": {
-            "get": {
-                "tags": [
-                    "Department"
-                ],
-                "summary": "",
-                "description": "Get data by id",
-                "operationId": "department_show",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "description": "id",
-                        "required": true,
-                        "schema": {
-                            "type": "number"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            },
-            "put": {
-                "tags": [
-                    "Department"
-                ],
-                "summary": "",
-                "description": "Update data",
-                "operationId": "department_update",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "description": "id",
-                        "required": true,
-                        "schema": {
-                            "type": "number"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "properties": {
-                                    "name": {
-                                        "type": "string"
-                                    }
-                                },
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Update Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            },
-            "delete": {
-                "tags": [
-                    "Department"
-                ],
-                "summary": "",
-                "description": "Delete data",
-                "operationId": "department_destroy",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "description": "id",
-                        "required": true,
-                        "schema": {
-                            "type": "number"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Delete Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            }
-        },
-        "/division": {
-            "get": {
-                "tags": [
-                    "Division"
-                ],
-                "summary": "",
-                "description": "Get all data",
-                "operationId": "division_index",
-                "parameters": [
-                    {
-                        "name": "per_page",
-                        "in": "query",
-                        "description": "per_page value is number. ex : ?per_page=10",
-                        "required": false,
-                        "schema": {
-                            "type": "number"
-                        }
-                    },
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "description": "page value is number. ex : ?page=1",
-                        "required": false,
-                        "schema": {
-                            "type": "number"
-                        }
-                    },
-                    {
-                        "name": "sort",
-                        "in": "query",
-                        "description": "Sort value is string with rule column-name:order. ex : ?sort=id:asc",
-                        "required": false,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "where",
-                        "in": "query",
-                        "description": "Where value is object. ex : ?where={'name':['john','doe'], 'dob':'1990-12-31'}",
-                        "required": false,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "count",
-                        "in": "query",
-                        "description": "Count value is boolean. ex : ?count=true",
-                        "required": false,
-                        "schema": {
-                            "type": "boolean"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": {
-                                        "total_data": "",
-                                        "per_page": "",
-                                        "total_page": "",
-                                        "page": ""
-                                    }
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            },
-            "post": {
-                "tags": [
-                    "Division"
-                ],
-                "summary": "",
-                "description": "Insert data",
-                "operationId": "division_store",
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "properties": {
-                                    "name": {
-                                        "type": "string"
-                                    }
-                                },
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Insert Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            }
-        },
-        "/division/{id}": {
-            "get": {
-                "tags": [
-                    "Division"
-                ],
-                "summary": "",
-                "description": "Get data by id",
-                "operationId": "division_show",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "description": "id",
-                        "required": true,
-                        "schema": {
-                            "type": "number"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            },
-            "put": {
-                "tags": [
-                    "Division"
-                ],
-                "summary": "",
-                "description": "Update data",
-                "operationId": "division_update",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "description": "id",
-                        "required": true,
-                        "schema": {
-                            "type": "number"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "properties": {
-                                    "name": {
-                                        "type": "string"
-                                    }
-                                },
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Update Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            },
-            "delete": {
-                "tags": [
-                    "Division"
-                ],
-                "summary": "",
-                "description": "Delete data",
-                "operationId": "division_destroy",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "description": "id",
-                        "required": true,
-                        "schema": {
-                            "type": "number"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Delete Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            }
-        },
-        "/download": {
-            "get": {
-                "tags": [
-                    "Download"
-                ],
-                "summary": "",
-                "description": "Get all data",
-                "operationId": "download_index",
-                "parameters": [
-                    {
-                        "name": "per_page",
-                        "in": "query",
-                        "description": "per_page value is number. ex : ?per_page=10",
-                        "required": false,
-                        "schema": {
-                            "type": "number"
-                        }
-                    },
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "description": "page value is number. ex : ?page=1",
-                        "required": false,
-                        "schema": {
-                            "type": "number"
-                        }
-                    },
-                    {
-                        "name": "sort",
-                        "in": "query",
-                        "description": "Sort value is string with rule column-name:order. ex : ?sort=id:asc",
-                        "required": false,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "where",
-                        "in": "query",
-                        "description": "Where value is object. ex : ?where={'name':['john','doe'], 'dob':'1990-12-31'}",
-                        "required": false,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "count",
-                        "in": "query",
-                        "description": "Count value is boolean. ex : ?count=true",
-                        "required": false,
-                        "schema": {
-                            "type": "boolean"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": {
-                                        "total_data": "",
-                                        "per_page": "",
-                                        "total_page": "",
-                                        "page": ""
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            "post": {
-                "tags": [
-                    "Download"
-                ],
-                "summary": "",
-                "description": "Insert data",
-                "operationId": "download_store",
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "properties": {
-                                    "name": {
-                                        "type": "string"
-                                    }
-                                },
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Insert Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            }
-        },
-        "/download/{id}": {
-            "get": {
-                "tags": [
-                    "Download"
-                ],
-                "summary": "",
-                "description": "Get data by id",
-                "operationId": "download_show",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "description": "id",
-                        "required": true,
-                        "schema": {
-                            "type": "number"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            "put": {
-                "tags": [
-                    "Download"
-                ],
-                "summary": "",
-                "description": "Update data",
-                "operationId": "download_update",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "description": "id",
-                        "required": true,
-                        "schema": {
-                            "type": "number"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "properties": {
-                                    "name": {
-                                        "type": "string"
-                                    }
-                                },
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Update Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            },
-            "delete": {
-                "tags": [
-                    "Download"
-                ],
-                "summary": "",
-                "description": "Delete data",
-                "operationId": "download_destroy",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "description": "id",
-                        "required": true,
-                        "schema": {
-                            "type": "number"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Delete Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            }
-        },
-        "/feature": {
-            "get": {
-                "tags": [
-                    "Feature"
-                ],
-                "summary": "",
-                "description": "Get all data",
-                "operationId": "feature_index",
-                "parameters": [
-                    {
-                        "name": "per_page",
-                        "in": "query",
-                        "description": "per_page value is number. ex : ?per_page=10",
-                        "required": false,
-                        "schema": {
-                            "type": "number"
-                        }
-                    },
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "description": "page value is number. ex : ?page=1",
-                        "required": false,
-                        "schema": {
-                            "type": "number"
-                        }
-                    },
-                    {
-                        "name": "sort",
-                        "in": "query",
-                        "description": "Sort value is string with rule column-name:order. ex : ?sort=id:asc",
-                        "required": false,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "where",
-                        "in": "query",
-                        "description": "Where value is object. ex : ?where={'name':['john','doe'], 'dob':'1990-12-31'}",
-                        "required": false,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "count",
-                        "in": "query",
-                        "description": "Count value is boolean. ex : ?count=true",
-                        "required": false,
-                        "schema": {
-                            "type": "boolean"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": {
-                                        "total_data": "",
-                                        "per_page": "",
-                                        "total_page": "",
-                                        "page": ""
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            "post": {
-                "tags": [
-                    "Feature"
-                ],
-                "summary": "",
-                "description": "Insert data",
-                "operationId": "feature_store",
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "properties": {
-                                    "name": {
-                                        "type": "string"
-                                    }
-                                },
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Insert Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            }
-        },
-        "/feature/{id}": {
-            "get": {
-                "tags": [
-                    "Feature"
-                ],
-                "summary": "",
-                "description": "Get data by id",
-                "operationId": "feature_show",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "description": "id",
-                        "required": true,
-                        "schema": {
-                            "type": "number"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            "put": {
-                "tags": [
-                    "Feature"
-                ],
-                "summary": "",
-                "description": "Update data",
-                "operationId": "feature_update",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "description": "id",
-                        "required": true,
-                        "schema": {
-                            "type": "number"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "properties": {
-                                    "name": {
-                                        "type": "string"
-                                    }
-                                },
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Update Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            },
-            "delete": {
-                "tags": [
-                    "Feature"
-                ],
-                "summary": "",
-                "description": "Delete data",
-                "operationId": "feature_destroy",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "description": "id",
-                        "required": true,
-                        "schema": {
-                            "type": "number"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Delete Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            }
-        },
-        "/geocode": {
-            "get": {
-                "tags": [
-                    "Geocode"
-                ],
-                "summary": "",
-                "description": "Get all data",
-                "operationId": "geocode_index",
-                "parameters": [
-                    {
-                        "name": "lat",
-                        "in": "query",
-                        "description": "lat value is decimal. ex : ?lat=-6.12412",
-                        "required": false,
-                        "schema": {
-                            "type": "number"
-                        }
-                    },
-                    {
-                        "name": "lon",
-                        "in": "query",
-                        "description": "lon value is decimal. ex : ?lon=103.3454",
-                        "required": false,
-                        "schema": {
-                            "type": "number"
-                        }
-                    },
-                    {
-                        "name": "api_key",
-                        "in": "query",
-                        "description": "Sort value is string. ex : ?api_key=xxx",
-                        "required": false,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": {
-                                        "place_id": "",
-                                        "display_name": "",
-                                        "address": "",
-                                        "boundingbox": ""
-                                    }
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            }
-        },
-        "/login": {
-            "post": {
-                "tags": [
-                    "Login"
+                    "Auth"
                 ],
                 "summary": "",
                 "description": "Login",
                 "operationId": "auth_login",
                 "requestBody": {
                     "content": {
-                        "application/json": {
+                        "multipart/form-data": {
                             "schema": {
                                 "properties": {
-                                    "username": {
+                                    "email": {
                                         "type": "string"
                                     },
                                     "password": {
                                         "type": "string"
                                     }
                                 },
-                                "type": "object",
-                                "example": {
-                                    "username": "",
-                                    "password": ""
-                                }
+                                "type": "object"
                             }
                         }
                     }
@@ -2390,19 +1034,52 @@
                             "application/json": {
                                 "example": {
                                     "success": true,
-                                    "message": "Login Data Successfull",
-                                    "data": {
-                                        "user": {
-                                            "id": "",
-                                            "level_id": "",
-                                            "username": "",
-                                            "name": "",
-                                            "email": "",
-                                            "picture": ""
-                                        },
-                                        "token": ""
+                                    "message": "Login Successfull",
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/register": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "",
+                "description": "Register",
+                "operationId": "auth_register",
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "properties": {
+                                    "email": {
+                                        "type": "string"
                                     },
-                                    "metadata": []
+                                    "password": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "success": true,
+                                    "message": "Register Successfull",
+                                    "data": []
                                 }
                             }
                         }
@@ -2410,19 +1087,19 @@
                 }
             }
         },
-        "/page": {
+        "/api/election": {
             "get": {
                 "tags": [
-                    "Page"
+                    "Election"
                 ],
                 "summary": "",
                 "description": "Get all data",
-                "operationId": "page_index",
+                "operationId": "election_index",
                 "parameters": [
                     {
                         "name": "per_page",
                         "in": "query",
-                        "description": "per_page value is number. ex : ?per_page=10",
+                        "description": "Per Page value is number. ex : ?per_page=10",
                         "required": false,
                         "schema": {
                             "type": "number"
@@ -2431,7 +1108,7 @@
                     {
                         "name": "page",
                         "in": "query",
-                        "description": "page value is number. ex : ?page=1",
+                        "description": "Page value is number. ex : ?page=2",
                         "required": false,
                         "schema": {
                             "type": "number"
@@ -2449,7 +1126,7 @@
                     {
                         "name": "where",
                         "in": "query",
-                        "description": "Where value is object. ex : ?where={'name':['john','doe'], 'dob':'1990-12-31'}",
+                        "description": "Where value is object. ex : ?where={'name':'john', 'dob':'1990-12-31'}",
                         "required": false,
                         "schema": {
                             "type": "string"
@@ -2471,28 +1148,27 @@
                         "content": {
                             "application/json": {
                                 "example": {
-                                    "success": true,
+                                    "status": true,
                                     "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": {
-                                        "total_data": "",
-                                        "per_page": "",
-                                        "total_page": "",
-                                        "page": ""
-                                    }
+                                    "data": []
                                 }
                             }
                         }
                     }
-                }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
             },
             "post": {
                 "tags": [
-                    "Page"
+                    "Election"
                 ],
                 "summary": "",
                 "description": "Insert data",
-                "operationId": "page_store",
+                "operationId": "election_store",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -2515,8 +1191,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Insert Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -2529,14 +1204,14 @@
                 ]
             }
         },
-        "/page/{id}": {
+        "/api/election/{id}": {
             "get": {
                 "tags": [
-                    "Page"
+                    "Election"
                 ],
                 "summary": "",
                 "description": "Get data by id",
-                "operationId": "page_show",
+                "operationId": "election_show",
                 "parameters": [
                     {
                         "name": "id",
@@ -2556,21 +1231,25 @@
                                 "example": {
                                     "success": true,
                                     "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
                     }
-                }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
             },
             "put": {
                 "tags": [
-                    "Page"
+                    "Election"
                 ],
                 "summary": "",
                 "description": "Update data",
-                "operationId": "page_update",
+                "operationId": "election_update",
                 "parameters": [
                     {
                         "name": "id",
@@ -2604,8 +1283,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Update Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -2619,11 +1297,11 @@
             },
             "delete": {
                 "tags": [
-                    "Page"
+                    "Election"
                 ],
                 "summary": "",
                 "description": "Delete data",
-                "operationId": "page_destroy",
+                "operationId": "election_destroy",
                 "parameters": [
                     {
                         "name": "id",
@@ -2643,8 +1321,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Delete Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -2657,19 +1334,19 @@
                 ]
             }
         },
-        "/permit": {
+        "/api/finance": {
             "get": {
                 "tags": [
-                    "Permit"
+                    "Finance"
                 ],
                 "summary": "",
                 "description": "Get all data",
-                "operationId": "permit_index",
+                "operationId": "finance_index",
                 "parameters": [
                     {
                         "name": "per_page",
                         "in": "query",
-                        "description": "per_page value is number. ex : ?per_page=10",
+                        "description": "Per Page value is number. ex : ?per_page=10",
                         "required": false,
                         "schema": {
                             "type": "number"
@@ -2678,7 +1355,7 @@
                     {
                         "name": "page",
                         "in": "query",
-                        "description": "page value is number. ex : ?page=1",
+                        "description": "Page value is number. ex : ?page=2",
                         "required": false,
                         "schema": {
                             "type": "number"
@@ -2696,7 +1373,7 @@
                     {
                         "name": "where",
                         "in": "query",
-                        "description": "Where value is object. ex : ?where={'name':['john','doe'], 'dob':'1990-12-31'}",
+                        "description": "Where value is object. ex : ?where={'name':'john', 'dob':'1990-12-31'}",
                         "required": false,
                         "schema": {
                             "type": "string"
@@ -2718,15 +1395,9 @@
                         "content": {
                             "application/json": {
                                 "example": {
-                                    "success": true,
+                                    "status": true,
                                     "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": {
-                                        "total_data": "",
-                                        "per_page": "",
-                                        "total_page": "",
-                                        "page": ""
-                                    }
+                                    "data": []
                                 }
                             }
                         }
@@ -2740,11 +1411,11 @@
             },
             "post": {
                 "tags": [
-                    "Permit"
+                    "Finance"
                 ],
                 "summary": "",
                 "description": "Insert data",
-                "operationId": "permit_store",
+                "operationId": "finance_store",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -2767,8 +1438,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Insert Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -2781,14 +1451,14 @@
                 ]
             }
         },
-        "/permit/{id}": {
+        "/api/finance/{id}": {
             "get": {
                 "tags": [
-                    "Permit"
+                    "Finance"
                 ],
                 "summary": "",
                 "description": "Get data by id",
-                "operationId": "permit_show",
+                "operationId": "finance_show",
                 "parameters": [
                     {
                         "name": "id",
@@ -2808,8 +1478,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -2823,11 +1492,11 @@
             },
             "put": {
                 "tags": [
-                    "Permit"
+                    "Finance"
                 ],
                 "summary": "",
                 "description": "Update data",
-                "operationId": "permit_update",
+                "operationId": "finance_update",
                 "parameters": [
                     {
                         "name": "id",
@@ -2861,8 +1530,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Update Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -2876,11 +1544,11 @@
             },
             "delete": {
                 "tags": [
-                    "Permit"
+                    "Finance"
                 ],
                 "summary": "",
                 "description": "Delete data",
-                "operationId": "permit_destroy",
+                "operationId": "finance_destroy",
                 "parameters": [
                     {
                         "name": "id",
@@ -2900,8 +1568,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Delete Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -2914,7 +1581,748 @@
                 ]
             }
         },
-        "/role": {
+        "/api/inventory": {
+            "get": {
+                "tags": [
+                    "Inventory"
+                ],
+                "summary": "",
+                "description": "Get all data",
+                "operationId": "inventory_index",
+                "parameters": [
+                    {
+                        "name": "per_page",
+                        "in": "query",
+                        "description": "Per Page value is number. ex : ?per_page=10",
+                        "required": false,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Page value is number. ex : ?page=2",
+                        "required": false,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Sort value is string with rule column-name:order. ex : ?sort=id:asc",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "where",
+                        "in": "query",
+                        "description": "Where value is object. ex : ?where={'name':'john', 'dob':'1990-12-31'}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "Count value is boolean. ex : ?count=true",
+                        "required": false,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "status": true,
+                                    "message": "Get Data Successfull",
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Inventory"
+                ],
+                "summary": "",
+                "description": "Insert data",
+                "operationId": "inventory_store",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "success": true,
+                                    "message": "Insert Data Successfull",
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/inventory/{id}": {
+            "get": {
+                "tags": [
+                    "Inventory"
+                ],
+                "summary": "",
+                "description": "Get data by id",
+                "operationId": "inventory_show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "success": true,
+                                    "message": "Get Data Successfull",
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "Inventory"
+                ],
+                "summary": "",
+                "description": "Update data",
+                "operationId": "inventory_update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "success": true,
+                                    "message": "Update Data Successfull",
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Inventory"
+                ],
+                "summary": "",
+                "description": "Delete data",
+                "operationId": "inventory_destroy",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "success": true,
+                                    "message": "Delete Data Successfull",
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/quick_count": {
+            "get": {
+                "tags": [
+                    "QuickCount"
+                ],
+                "summary": "",
+                "description": "Get all data",
+                "operationId": "quick_count_index",
+                "parameters": [
+                    {
+                        "name": "per_page",
+                        "in": "query",
+                        "description": "Per Page value is number. ex : ?per_page=10",
+                        "required": false,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Page value is number. ex : ?page=2",
+                        "required": false,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Sort value is string with rule column-name:order. ex : ?sort=id:asc",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "where",
+                        "in": "query",
+                        "description": "Where value is object. ex : ?where={'name':'john', 'dob':'1990-12-31'}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "Count value is boolean. ex : ?count=true",
+                        "required": false,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "status": true,
+                                    "message": "Get Data Successfull",
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "QuickCount"
+                ],
+                "summary": "",
+                "description": "Insert data",
+                "operationId": "quick_count_store",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "success": true,
+                                    "message": "Insert Data Successfull",
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/quick_count/{id}": {
+            "get": {
+                "tags": [
+                    "QuickCount"
+                ],
+                "summary": "",
+                "description": "Get data by id",
+                "operationId": "quick_count_show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "success": true,
+                                    "message": "Get Data Successfull",
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "QuickCount"
+                ],
+                "summary": "",
+                "description": "Update data",
+                "operationId": "quick_count_update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "success": true,
+                                    "message": "Update Data Successfull",
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "QuickCount"
+                ],
+                "summary": "",
+                "description": "Delete data",
+                "operationId": "quick_count_destroy",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "success": true,
+                                    "message": "Delete Data Successfull",
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/report": {
+            "get": {
+                "tags": [
+                    "Report"
+                ],
+                "summary": "",
+                "description": "Get all data",
+                "operationId": "report_index",
+                "parameters": [
+                    {
+                        "name": "per_page",
+                        "in": "query",
+                        "description": "Per Page value is number. ex : ?per_page=10",
+                        "required": false,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Page value is number. ex : ?page=2",
+                        "required": false,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Sort value is string with rule column-name:order. ex : ?sort=id:asc",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "where",
+                        "in": "query",
+                        "description": "Where value is object. ex : ?where={'name':'john', 'dob':'1990-12-31'}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "Count value is boolean. ex : ?count=true",
+                        "required": false,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "status": true,
+                                    "message": "Get Data Successfull",
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Report"
+                ],
+                "summary": "",
+                "description": "Insert data",
+                "operationId": "report_store",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "success": true,
+                                    "message": "Insert Data Successfull",
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/report/{id}": {
+            "get": {
+                "tags": [
+                    "Report"
+                ],
+                "summary": "",
+                "description": "Get data by id",
+                "operationId": "report_show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "success": true,
+                                    "message": "Get Data Successfull",
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "Report"
+                ],
+                "summary": "",
+                "description": "Update data",
+                "operationId": "report_update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "success": true,
+                                    "message": "Update Data Successfull",
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Report"
+                ],
+                "summary": "",
+                "description": "Delete data",
+                "operationId": "report_destroy",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "success": true,
+                                    "message": "Delete Data Successfull",
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/role": {
             "get": {
                 "tags": [
                     "Role"
@@ -2926,7 +2334,7 @@
                     {
                         "name": "per_page",
                         "in": "query",
-                        "description": "per_page value is number. ex : ?per_page=10",
+                        "description": "Per Page value is number. ex : ?per_page=10",
                         "required": false,
                         "schema": {
                             "type": "number"
@@ -2935,7 +2343,7 @@
                     {
                         "name": "page",
                         "in": "query",
-                        "description": "page value is number. ex : ?page=1",
+                        "description": "Page value is number. ex : ?page=2",
                         "required": false,
                         "schema": {
                             "type": "number"
@@ -2953,7 +2361,7 @@
                     {
                         "name": "where",
                         "in": "query",
-                        "description": "Where value is object. ex : ?where={'name':['john','doe'], 'dob':'1990-12-31'}",
+                        "description": "Where value is object. ex : ?where={'name':'john', 'dob':'1990-12-31'}",
                         "required": false,
                         "schema": {
                             "type": "string"
@@ -2975,15 +2383,9 @@
                         "content": {
                             "application/json": {
                                 "example": {
-                                    "success": true,
+                                    "status": true,
                                     "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": {
-                                        "total_data": "",
-                                        "per_page": "",
-                                        "total_page": "",
-                                        "page": ""
-                                    }
+                                    "data": []
                                 }
                             }
                         }
@@ -3024,8 +2426,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Insert Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -3038,7 +2439,7 @@
                 ]
             }
         },
-        "/role/{id}": {
+        "/api/role/{id}": {
             "get": {
                 "tags": [
                     "Role"
@@ -3065,8 +2466,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -3118,8 +2518,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Update Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -3157,8 +2556,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Delete Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -3430,19 +2828,19 @@
                 ]
             }
         },
-        "/slider": {
+        "/api/survey_answer": {
             "get": {
                 "tags": [
-                    "Slider"
+                    "SurveyAnswer"
                 ],
                 "summary": "",
                 "description": "Get all data",
-                "operationId": "slider_index",
+                "operationId": "survey_answer_index",
                 "parameters": [
                     {
                         "name": "per_page",
                         "in": "query",
-                        "description": "per_page value is number. ex : ?per_page=10",
+                        "description": "Per Page value is number. ex : ?per_page=10",
                         "required": false,
                         "schema": {
                             "type": "number"
@@ -3451,7 +2849,7 @@
                     {
                         "name": "page",
                         "in": "query",
-                        "description": "page value is number. ex : ?page=1",
+                        "description": "Page value is number. ex : ?page=2",
                         "required": false,
                         "schema": {
                             "type": "number"
@@ -3469,7 +2867,7 @@
                     {
                         "name": "where",
                         "in": "query",
-                        "description": "Where value is object. ex : ?where={'name':['john','doe'], 'dob':'1990-12-31'}",
+                        "description": "Where value is object. ex : ?where={'name':'john', 'dob':'1990-12-31'}",
                         "required": false,
                         "schema": {
                             "type": "string"
@@ -3491,28 +2889,27 @@
                         "content": {
                             "application/json": {
                                 "example": {
-                                    "success": true,
+                                    "status": true,
                                     "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": {
-                                        "total_data": "",
-                                        "per_page": "",
-                                        "total_page": "",
-                                        "page": ""
-                                    }
+                                    "data": []
                                 }
                             }
                         }
                     }
-                }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
             },
             "post": {
                 "tags": [
-                    "Slider"
+                    "SurveyAnswer"
                 ],
                 "summary": "",
                 "description": "Insert data",
-                "operationId": "slider_store",
+                "operationId": "survey_answer_store",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -3535,8 +2932,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Insert Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -3549,14 +2945,14 @@
                 ]
             }
         },
-        "/slider/{id}": {
+        "/api/survey_answer/{id}": {
             "get": {
                 "tags": [
-                    "Slider"
+                    "SurveyAnswer"
                 ],
                 "summary": "",
                 "description": "Get data by id",
-                "operationId": "slider_show",
+                "operationId": "survey_answer_show",
                 "parameters": [
                     {
                         "name": "id",
@@ -3576,21 +2972,25 @@
                                 "example": {
                                     "success": true,
                                     "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
                     }
-                }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
             },
             "put": {
                 "tags": [
-                    "Slider"
+                    "SurveyAnswer"
                 ],
                 "summary": "",
                 "description": "Update data",
-                "operationId": "slider_update",
+                "operationId": "survey_answer_update",
                 "parameters": [
                     {
                         "name": "id",
@@ -3624,8 +3024,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Update Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -3639,11 +3038,11 @@
             },
             "delete": {
                 "tags": [
-                    "Slider"
+                    "SurveyAnswer"
                 ],
                 "summary": "",
                 "description": "Delete data",
-                "operationId": "slider_destroy",
+                "operationId": "survey_answer_destroy",
                 "parameters": [
                     {
                         "name": "id",
@@ -3663,8 +3062,501 @@
                                 "example": {
                                     "success": true,
                                     "message": "Delete Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/survey": {
+            "get": {
+                "tags": [
+                    "Survey"
+                ],
+                "summary": "",
+                "description": "Get all data",
+                "operationId": "survey_index",
+                "parameters": [
+                    {
+                        "name": "per_page",
+                        "in": "query",
+                        "description": "Per Page value is number. ex : ?per_page=10",
+                        "required": false,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Page value is number. ex : ?page=2",
+                        "required": false,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Sort value is string with rule column-name:order. ex : ?sort=id:asc",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "where",
+                        "in": "query",
+                        "description": "Where value is object. ex : ?where={'name':'john', 'dob':'1990-12-31'}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "Count value is boolean. ex : ?count=true",
+                        "required": false,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "status": true,
+                                    "message": "Get Data Successfull",
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Survey"
+                ],
+                "summary": "",
+                "description": "Insert data",
+                "operationId": "survey_store",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "success": true,
+                                    "message": "Insert Data Successfull",
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/survey/{id}": {
+            "get": {
+                "tags": [
+                    "Survey"
+                ],
+                "summary": "",
+                "description": "Get data by id",
+                "operationId": "survey_show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "success": true,
+                                    "message": "Get Data Successfull",
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "Survey"
+                ],
+                "summary": "",
+                "description": "Update data",
+                "operationId": "survey_update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "success": true,
+                                    "message": "Update Data Successfull",
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Survey"
+                ],
+                "summary": "",
+                "description": "Delete data",
+                "operationId": "survey_destroy",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "success": true,
+                                    "message": "Delete Data Successfull",
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/survey_question": {
+            "get": {
+                "tags": [
+                    "SurveyQuestion"
+                ],
+                "summary": "",
+                "description": "Get all data",
+                "operationId": "survey_question_index",
+                "parameters": [
+                    {
+                        "name": "per_page",
+                        "in": "query",
+                        "description": "Per Page value is number. ex : ?per_page=10",
+                        "required": false,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Page value is number. ex : ?page=2",
+                        "required": false,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Sort value is string with rule column-name:order. ex : ?sort=id:asc",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "where",
+                        "in": "query",
+                        "description": "Where value is object. ex : ?where={'name':'john', 'dob':'1990-12-31'}",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "Count value is boolean. ex : ?count=true",
+                        "required": false,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "status": true,
+                                    "message": "Get Data Successfull",
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "SurveyQuestion"
+                ],
+                "summary": "",
+                "description": "Insert data",
+                "operationId": "survey_question_store",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "success": true,
+                                    "message": "Insert Data Successfull",
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/survey_question/{id}": {
+            "get": {
+                "tags": [
+                    "SurveyQuestion"
+                ],
+                "summary": "",
+                "description": "Get data by id",
+                "operationId": "survey_question_show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "success": true,
+                                    "message": "Get Data Successfull",
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "SurveyQuestion"
+                ],
+                "summary": "",
+                "description": "Update data",
+                "operationId": "survey_question_update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "success": true,
+                                    "message": "Update Data Successfull",
+                                    "data": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "SurveyQuestion"
+                ],
+                "summary": "",
+                "description": "Delete data",
+                "operationId": "survey_question_destroy",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "success": true,
+                                    "message": "Delete Data Successfull",
+                                    "data": []
                                 }
                             }
                         }
@@ -3678,100 +3570,21 @@
             }
         },
         "/upload": {
-            "get": {
-                "tags": [
-                    "Upload"
-                ],
-                "summary": "",
-                "description": "Get all data",
-                "operationId": "upload_index",
-                "parameters": [
-                    {
-                        "name": "per_page",
-                        "in": "query",
-                        "description": "per_page value is number. ex : ?per_page=10",
-                        "required": false,
-                        "schema": {
-                            "type": "number"
-                        }
-                    },
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "description": "page value is number. ex : ?page=1",
-                        "required": false,
-                        "schema": {
-                            "type": "number"
-                        }
-                    },
-                    {
-                        "name": "sort",
-                        "in": "query",
-                        "description": "Sort value is string with rule column-name:order. ex : ?sort=id:asc",
-                        "required": false,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "where",
-                        "in": "query",
-                        "description": "Where value is object. ex : ?where={'name':['john','doe'], 'dob':'1990-12-31'}",
-                        "required": false,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "count",
-                        "in": "query",
-                        "description": "Count value is boolean. ex : ?count=true",
-                        "required": false,
-                        "schema": {
-                            "type": "boolean"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": {
-                                        "total_data": "",
-                                        "per_page": "",
-                                        "total_page": "",
-                                        "page": ""
-                                    }
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            },
             "post": {
                 "tags": [
                     "Upload"
                 ],
                 "summary": "",
-                "description": "Insert data",
-                "operationId": "upload_store",
+                "description": "Upload file",
+                "operationId": "upload",
                 "requestBody": {
                     "content": {
-                        "application/json": {
+                        "multipart/form-data": {
                             "schema": {
                                 "properties": {
-                                    "name": {
-                                        "type": "string"
+                                    "documentType": {
+                                        "description": "documentType",
+                                        "type": "file"
                                     }
                                 },
                                 "type": "object"
@@ -3785,10 +3598,9 @@
                         "content": {
                             "application/json": {
                                 "example": {
-                                    "success": true,
-                                    "message": "Insert Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "error": false,
+                                    "message": "Upload Data Successfull",
+                                    "data": []
                                 }
                             }
                         }
@@ -3801,140 +3613,7 @@
                 ]
             }
         },
-        "/upload/{id}": {
-            "get": {
-                "tags": [
-                    "Upload"
-                ],
-                "summary": "",
-                "description": "Get data by id",
-                "operationId": "upload_show",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "description": "id",
-                        "required": true,
-                        "schema": {
-                            "type": "number"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            },
-            "put": {
-                "tags": [
-                    "Upload"
-                ],
-                "summary": "",
-                "description": "Update data",
-                "operationId": "upload_update",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "description": "id",
-                        "required": true,
-                        "schema": {
-                            "type": "number"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "properties": {
-                                    "name": {
-                                        "type": "string"
-                                    }
-                                },
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Update Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            },
-            "delete": {
-                "tags": [
-                    "Upload"
-                ],
-                "summary": "",
-                "description": "Delete data",
-                "operationId": "upload_destroy",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "description": "id",
-                        "required": true,
-                        "schema": {
-                            "type": "number"
-                        }
-                    }
-                ],
-                "responses": {
-                    "default": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "example": {
-                                    "success": true,
-                                    "message": "Delete Data Successfull",
-                                    "data": [],
-                                    "metadata": []
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
-            }
-        },
-        "/user": {
+        "/api/user": {
             "get": {
                 "tags": [
                     "User"
@@ -3946,7 +3625,7 @@
                     {
                         "name": "per_page",
                         "in": "query",
-                        "description": "per_page value is number. ex : ?per_page=10",
+                        "description": "Per Page value is number. ex : ?per_page=10",
                         "required": false,
                         "schema": {
                             "type": "number"
@@ -3955,7 +3634,7 @@
                     {
                         "name": "page",
                         "in": "query",
-                        "description": "page value is number. ex : ?page=1",
+                        "description": "Page value is number. ex : ?page=2",
                         "required": false,
                         "schema": {
                             "type": "number"
@@ -3973,7 +3652,7 @@
                     {
                         "name": "where",
                         "in": "query",
-                        "description": "Where value is object. ex : ?where={'name':['john','doe'], 'dob':'1990-12-31'}",
+                        "description": "Where value is object. ex : ?where={'name':'john', 'dob':'1990-12-31'}",
                         "required": false,
                         "schema": {
                             "type": "string"
@@ -3995,15 +3674,9 @@
                         "content": {
                             "application/json": {
                                 "example": {
-                                    "success": true,
+                                    "status": true,
                                     "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": {
-                                        "total_data": "",
-                                        "per_page": "",
-                                        "total_page": "",
-                                        "page": ""
-                                    }
+                                    "data": []
                                 }
                             }
                         }
@@ -4027,15 +3700,6 @@
                         "application/json": {
                             "schema": {
                                 "properties": {
-                                    "username": {
-                                        "type": "string"
-                                    },
-                                    "password": {
-                                        "type": "string"
-                                    },
-                                    "email": {
-                                        "type": "string"
-                                    },
                                     "name": {
                                         "type": "string"
                                     }
@@ -4053,8 +3717,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Insert Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -4067,7 +3730,7 @@
                 ]
             }
         },
-        "/user/{id}": {
+        "/api/user/{id}": {
             "get": {
                 "tags": [
                     "User"
@@ -4094,8 +3757,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -4130,15 +3792,6 @@
                         "application/json": {
                             "schema": {
                                 "properties": {
-                                    "username": {
-                                        "type": "string"
-                                    },
-                                    "password": {
-                                        "type": "string"
-                                    },
-                                    "email": {
-                                        "type": "string"
-                                    },
                                     "name": {
                                         "type": "string"
                                     }
@@ -4156,8 +3809,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Update Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -4195,8 +3847,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Delete Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -4209,19 +3860,19 @@
                 ]
             }
         },
-        "/user_level": {
+        "/api/voter": {
             "get": {
                 "tags": [
-                    "User Level"
+                    "Voter"
                 ],
                 "summary": "",
                 "description": "Get all data",
-                "operationId": "user_level_index",
+                "operationId": "voter_index",
                 "parameters": [
                     {
                         "name": "per_page",
                         "in": "query",
-                        "description": "per_page value is number. ex : ?per_page=10",
+                        "description": "Per Page value is number. ex : ?per_page=10",
                         "required": false,
                         "schema": {
                             "type": "number"
@@ -4230,7 +3881,7 @@
                     {
                         "name": "page",
                         "in": "query",
-                        "description": "page value is number. ex : ?page=1",
+                        "description": "Page value is number. ex : ?page=2",
                         "required": false,
                         "schema": {
                             "type": "number"
@@ -4248,7 +3899,7 @@
                     {
                         "name": "where",
                         "in": "query",
-                        "description": "Where value is object. ex : ?where={'name':['john','doe'], 'dob':'1990-12-31'}",
+                        "description": "Where value is object. ex : ?where={'name':'john', 'dob':'1990-12-31'}",
                         "required": false,
                         "schema": {
                             "type": "string"
@@ -4270,15 +3921,9 @@
                         "content": {
                             "application/json": {
                                 "example": {
-                                    "success": true,
+                                    "status": true,
                                     "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": {
-                                        "total_data": "",
-                                        "per_page": "",
-                                        "total_page": "",
-                                        "page": ""
-                                    }
+                                    "data": []
                                 }
                             }
                         }
@@ -4292,11 +3937,11 @@
             },
             "post": {
                 "tags": [
-                    "User Level"
+                    "Voter"
                 ],
                 "summary": "",
                 "description": "Insert data",
-                "operationId": "user_level_store",
+                "operationId": "voter_store",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -4319,8 +3964,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Insert Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -4333,14 +3977,14 @@
                 ]
             }
         },
-        "/user_level/{id}": {
+        "/api/voter/{id}": {
             "get": {
                 "tags": [
-                    "User Level"
+                    "Voter"
                 ],
                 "summary": "",
                 "description": "Get data by id",
-                "operationId": "user_level_show",
+                "operationId": "voter_show",
                 "parameters": [
                     {
                         "name": "id",
@@ -4360,8 +4004,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Get Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -4375,11 +4018,11 @@
             },
             "put": {
                 "tags": [
-                    "User Level"
+                    "Voter"
                 ],
                 "summary": "",
                 "description": "Update data",
-                "operationId": "user_level_update",
+                "operationId": "voter_update",
                 "parameters": [
                     {
                         "name": "id",
@@ -4413,8 +4056,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Update Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }
@@ -4428,11 +4070,11 @@
             },
             "delete": {
                 "tags": [
-                    "User Level"
+                    "Voter"
                 ],
                 "summary": "",
                 "description": "Delete data",
-                "operationId": "user_level_destroy",
+                "operationId": "voter_destroy",
                 "parameters": [
                     {
                         "name": "id",
@@ -4452,8 +4094,7 @@
                                 "example": {
                                     "success": true,
                                     "message": "Delete Data Successfull",
-                                    "data": [],
-                                    "metadata": []
+                                    "data": []
                                 }
                             }
                         }

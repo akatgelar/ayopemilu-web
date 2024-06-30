@@ -2,17 +2,14 @@
 
 namespace App\Http\Resources;
 
-use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class ApiResource extends JsonResource
 {
-    //define properti
+
     public $status;
-    public $statusCode;
     public $message;
-    public $data;
-    public $metadata;
+    public $pagination;
 
     /**
      * __construct
@@ -22,40 +19,27 @@ class ApiResource extends JsonResource
      * @param  mixed $resource
      * @return void
      */
-    public function __construct($status, $statusCode, $message, $data, $metadata)
+    public function __construct($status, $message, $resource, $pagination)
     {
-        parent::__construct($data);
+        parent::__construct($resource);
         $this->status  = $status;
-        $this->statusCode  = $statusCode;
         $this->message = $message;
-        $this->data = $data;
-        $this->metadata = $metadata;
+        $this->pagination = $pagination;
     }
 
     /**
      * Transform the resource into an array.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return array
+     * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
      */
     public function toArray($request)
     {
         return [
-            'success'   => $this->status,
+            'status'   => $this->status,
             'message'   => $this->message,
-            'data'      => $this->data,
-            'metadata'  => $this->metadata
+            'data'      => $this->resource,
+            'pagination'      => $this->pagination,
         ];
-    }
-
-    /**
-     * Transform the resource into an response.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return array
-     */
-    public function toResponse($request)
-    {
-        return parent::toResponse($request)->setStatusCode($this->statusCode);
     }
 }
