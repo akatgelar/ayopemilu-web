@@ -136,7 +136,7 @@
             formdata = new FormData();
             if($(this).prop('files').length > 0) {
                 file =$(this).prop('files')[0];
-                formdata.append("image", file);
+                formdata.append("file", file);
             }
             $.ajaxSetup({
                 headers:{

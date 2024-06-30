@@ -102,9 +102,13 @@ class UserController extends Controller
         // query get
         $query = User::select('users.*',
             'c.name as created_name',
-            'u.name as updated_name')
+            'u.name as updated_name',
+            'r.name as role_name',
+            'e.category as election_category', 'e.area as election_area')
         ->join('users as c', 'c.id', '=', 'users.created_by')
-        ->join('users as u', 'u.id', '=', 'users.updated_by');
+        ->join('users as u', 'u.id', '=', 'users.updated_by')
+        ->join('roles as r', 'r.id', '=', 'users.role_id')
+        ->join('elections as e', 'e.id', '=', 'users.election_id');
 
         // query where
         if($where){
@@ -150,6 +154,7 @@ class UserController extends Controller
 
             foreach($query as $qry) {
                 $temp = $qry;
+                $temp['election_name'] = $temp['election_category'] . ' - ' . $temp['election_area'];
                 array_push($datas, $temp);
             };
         }
