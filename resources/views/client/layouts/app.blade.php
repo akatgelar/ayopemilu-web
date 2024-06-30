@@ -85,8 +85,8 @@
                     </li>
                 </ul>
                 <div class="ms-auto">
-                    <a target="_blank" href="https://ayopemilu.nusantaradigital.id/mobile" class="btn bg-gradiant">Mobile</a>
-                    <a target="_blank" href="https://ayopemilu.nusantaradigital.id/admin" class="btn bg-gray">Admin</a>
+                    <a target="_blank" href="{{url('/mobile')}}" class="btn bg-gradiant">Mobile</a>
+                    <a target="_blank" href="{{url('/admin')}}" class="btn bg-gray">Admin</a>
                 </div>
             </div>
         </div>
