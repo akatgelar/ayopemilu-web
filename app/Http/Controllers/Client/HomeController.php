@@ -23,8 +23,6 @@ class HomeController extends Controller
         $data['og']['title'] = 'Home';
         $data['og']['description'] = 'Home';
         $data['setting'] = \App\Helpers\AppHelper::instance()->requestApiSetting();
-        $data['sliders'] = \App\Helpers\AppHelper::instance()->requestApiGet('api/slider');
-        $data['features'] = \App\Helpers\AppHelper::instance()->requestApiGet('api/feature');
         return view('client.home.index', $data);
     }
 }
