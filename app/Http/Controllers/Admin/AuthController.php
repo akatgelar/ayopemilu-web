@@ -44,12 +44,8 @@ class AuthController extends Controller
 
         $payload = $request->all();
         $result = \App\Helpers\AppHelper::instance()->requestApiLogin('/api/login', $payload);
-        print_r($result);
         $data['result'] = $result[0];
         $data['message'] = $result[1];
-
-        print_r($data['result']['data']);
-        print_r($data['result']['auth']['token']);
 
         if($data['result']) {
             \App\Helpers\AppHelper::instance()->setSession($data['result']['data'], $data['result']['auth']['token']);
