@@ -140,7 +140,16 @@ Route::controller(App\Http\Controllers\Api\DashboardController::class)->group(fu
     Route::get('dashboard/report/{id}', 'report');
     Route::get('dashboard/finance/{id}', 'finance');
     Route::get('dashboard/inventory/{id}', 'inventory');
+    Route::get('dashboard/top-page', 'topPage');
+    Route::get('dashboard/top-device', 'topDevice');
+    Route::get('dashboard/top-os', 'topOs');
+    Route::get('dashboard/top-browser', 'topBrowser');
+    Route::get('dashboard/top-country', 'topCountry');
+    Route::get('dashboard/top-city', 'topCity');
+    Route::get('dashboard/access-daily', 'accessDaily');
+    Route::get('dashboard/access-monthly', 'accessMonthly');
 });
+
 
 Route::fallback(function(){
     return response()->json(
