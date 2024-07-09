@@ -66,61 +66,72 @@ class AuthController extends Controller
         if ($token) {
             $user = User::findOrFail(auth()->guard('api')->user()['id']);
 
-            $role = Role::find($user['role_id']);
-            $election = Election::find($user['election_id']);
-            $caleg = User::where('role_id', '=', 2)->where('election_id', '=', $user['election_id'])->limit(1)->get();
+            if ($user['expired_date'] > $now = \Carbon\Carbon::now()) {
 
-            if ($role) {
-                $user['role'] = $role;
-            } else{
-                $temp_role = [];
-                $temp_role['id'] = 0;
-                $temp_role['name'] = '';
-                $user['role'] = $temp_role;
-            }
+                $role = Role::find($user['role_id']);
+                $election = Election::find($user['election_id']);
+                $caleg = User::where('role_id', '=', 2)->where('election_id', '=', $user['election_id'])->limit(1)->get();
 
-            if ($election) {
-                $user['election'] = $election;
-            } else {
-                $temp_election = [];
-                $temp_election['id'] = 0;
-                $temp_election['category'] = '';
-                $temp_election['area'] = '';
-                $temp_election['subarea'] = '';
-                $temp_election['voters_all'] = 0;
-                $temp_election['voters_target'] = 0;
-                $user['election'] = $temp_election;
-            }
+                if ($role) {
+                    $user['role'] = $role;
+                } else{
+                    $temp_role = [];
+                    $temp_role['id'] = 0;
+                    $temp_role['name'] = '';
+                    $user['role'] = $temp_role;
+                }
 
-            if (!$caleg->isEmpty()) {
-                $user['caleg_id'] = $caleg[0]['id'];
-            } else {
-                $user['caleg_id'] = 0;
-            }
+                if ($election) {
+                    $user['election'] = $election;
+                } else {
+                    $temp_election = [];
+                    $temp_election['id'] = 0;
+                    $temp_election['category'] = '';
+                    $temp_election['area'] = '';
+                    $temp_election['subarea'] = '';
+                    $temp_election['voters_all'] = 0;
+                    $temp_election['voters_target'] = 0;
+                    $user['election'] = $temp_election;
+                }
 
-            // save session
-            Session::push('user', [
-                'id' => $user['id'],
-                'name' => $user['name'],
-                'email' => $user['email']
-            ]);
-            Session::regenerate();
+                if (!$caleg->isEmpty()) {
+                    $user['caleg_id'] = $caleg[0]['id'];
+                } else {
+                    $user['caleg_id'] = 0;
+                }
 
-            return response()->json([
-                'status' => true,
-                'message' => 'Login success',
-                'data' => [
-                    'auth' => [
-                        'token' => $token,
-                        'type' => 'bearer',
+                // save session
+                Session::push('user', [
+                    'id' => $user['id'],
+                    'name' => $user['name'],
+                    'email' => $user['email']
+                ]);
+                Session::regenerate();
+
+                return response()->json([
+                    'status' => true,
+                    'message' => 'Login success',
+                    'data' => [
+                        'auth' => [
+                            'token' => $token,
+                            'type' => 'bearer',
+                        ],
+                        'data' => $user
                     ],
-                    'data' => $user
-                ],
-            ]);
+                ]);
+
+            } else {
+                return response()->json([
+                    'status' => false,
+                    'message' => 'Account has expired',
+                    'data' => [],
+                ], 401);
+            }
+
         } else {
             return response()->json([
                 'status' => false,
-                'message' => 'Akun sudah expired',
+                'message' => 'Username or password not found',
                 'data' => [],
             ], 401);
         }
