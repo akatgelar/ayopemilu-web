@@ -1,7 +1,7 @@
 services:
   web:
     # build: .
-    image: akatgelar/ayopemilu:latest
+    image: ghcr.io/akatgelar/ayopemilu:latest
     container_name: 'ayopemilu'
     env_file:
       - .env

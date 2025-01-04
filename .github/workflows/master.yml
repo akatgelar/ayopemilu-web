@@ -15,13 +15,14 @@ jobs:
       - name: Login to Dockerhub
         uses: docker/login-action@v1
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          registry: https://ghcr.io
+          username: ${{ secrets.PACKAGE_USERNAME }}
+          password: ${{ secrets.PACKAGE_TOKEN }}
 
       - name: Build and push Docker image
         run: |
-          docker build -t akatgelar/ayopemilu:latest -f .docker/Dockerfile .
-          docker push akatgelar/ayopemilu:latest
+          docker build -t ghcr.io/akatgelar/ayopemilu:latest -f .docker/Dockerfile .
+          docker push ghcr.io/akatgelar/ayopemilu:latest
 
       - name: Copy docker-compose file to VPS
         uses: appleboy/scp-action@v0.1.7
@@ -44,8 +45,10 @@ jobs:
           envs: ENV
           script: |
             cd /home/app/ayopemilu/
+            echo "${{ secrets.PACKAGE_TOKEN }}" | docker login ghcr.io -username ${{ secrets.PACKAGE_USERNAME }} --password-stdin
             printf "$ENV" >> .env
             sudo docker compose stop
             sudo docker compose rm -f
             sudo docker compose pull
             sudo docker compose up -d
+            sudo docker exec ayopemilu php /var/www/artisan migrate
